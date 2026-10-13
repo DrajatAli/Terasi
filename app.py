@@ -184,7 +184,14 @@ if menu == "Dashboard Peta":
     center_lat = df_laporan['latitude'].median() if not df_laporan.empty else -7.4330
     center_lng = df_laporan['longitude'].median() if not df_laporan.empty else 112.6170
 
-    m = folium.Map(location=[center_lat, center_lng], zoom_start=14, tiles="CartoDB dark_matter")
+    m = folium.Map(
+        location=[center_lat, center_lng],
+        zoom_start=14,
+        tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+        attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains="abcd",
+        max_zoom=20
+    )
 
     # 4A. Plot Fasilitas TPS / TPST 3R (Pin Hijau)
     for _, tps in df_tps.iterrows():
