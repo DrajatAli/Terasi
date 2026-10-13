@@ -66,7 +66,7 @@ if "active_nav" not in st.session_state:
 # ==========================================
 # 2. KONFIGURASI GOOGLE SHEETS
 # ==========================================
-SPREADSHEET_ID = "GANTI_DENGAN_SPREADSHEET_ID_ANDA"
+SPREADSHEET_ID = "16K7Y9h9n9gEY3RyRaRk6xx9THpAcGG0Ek9KVSHeDEkk"
 
 SHEET_LAPORAN_NAME = quote("Laporan Warga")
 SHEET_TPS_NAME = quote("TPS")
