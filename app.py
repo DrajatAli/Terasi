@@ -152,7 +152,7 @@ with st.sidebar:
         st.image("logo_terasi.jpeg", use_container_width=True)
     else:
         st.markdown("### ♻️ **TERASI**")
-        st.caption("Titik Evaluasi Rute & Area Sampah Terintegrasi\nKecamatan Wonoayu • Sidoarjo")
+        st.caption("Titik Evaluasi & Area Sampah Terintegrasi\nKecamatan Wonoayu • Sidoarjo")
 
     st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
     st.caption("PILIH MENU")
@@ -162,7 +162,7 @@ with st.sidebar:
 
     st.button("🗺️  Dashboard Peta Kendali", on_click=set_nav, args=("🗺️ Dashboard Peta",), use_container_width=True)
     st.button("🛠️  Panel Verifikasi & Status", on_click=set_nav, args=("🛠️ Panel Verifikasi & Status",), use_container_width=True)
-    st.button("📊  Analitik & Evaluasi Rute", on_click=set_nav, args=("📊 Analitik & Evaluasi Rute",), use_container_width=True)
+    st.button("📊  Analitik & Evaluasi", on_click=set_nav, args=("📊 Analitik & Evaluasi",), use_container_width=True)
     st.button("📋  Tabel Rekapitulasi Data", on_click=set_nav, args=("📋 Tabel Rekapitulasi Data",), use_container_width=True)
 
     st.divider()
@@ -376,8 +376,8 @@ elif menu_aktif == "🛠️ Panel Verifikasi & Status":
     else:
         st.warning("Belum ada data laporan yang tersedia untuk diverifikasi.")
 
-# --- TAB 3: ANALITIK & EVALUASI RUTE ---
-elif menu_aktif == "📊 Analitik & Evaluasi Rute":
+# --- TAB 3: ANALITIK & Evaluasi ---
+elif menu_aktif == "📊 Analitik & Evaluasi":
     st.subheader("📊 Analitik & Evaluasi Sebaran Laporan vs Ketersediaan Fasilitas TPST")
 
     desa_tps = df_tps['desa'].value_counts() if not df_tps.empty and 'desa' in df_tps.columns else pd.Series(dtype=int)
